@@ -1,0 +1,6 @@
+import requests
+
+r = requests.get('https://api.kraken.com/0/public/Ticker?pair=BTCUSD');
+ticker = r.json()
+
+print('%.2f€' % float(ticker['result']['XXBTZEUR']['c'][0]))
